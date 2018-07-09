@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+$jdcolor: #ec494e;
+
+.search {
+    height: 45px;
+    display: flex;
+    background-color: $jdcolor;
+
+    align-items: center;
+
+    .logo {
+        flex-basis: 55px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .searchbar {
+        flex: 1;
+        height: 36px;
+        border-radius: 18px;
+        border: none;
+        outline: none;
+        padding-left: 30px;
+    }
+
+    .login {
+        flex-basis: 55px;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.banner {
+    position: relative;
+
+    a {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        // background-color: yellowgreen;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0px 5px;
+
+            // 在sass里面会写一伪类前面都用一个&符，代表外面的那个元素本身
+            &:nth-child(1) {
+                background-color: gray;
+                border: 1px solid #fff;
+            }
+        }
+    }
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        width: 25%;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
